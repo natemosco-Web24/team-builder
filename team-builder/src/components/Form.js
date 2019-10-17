@@ -5,7 +5,7 @@ export default function Form(props) {
     const [key, setKey] = useState({})
 
     const onChange = (event) => {
-        setEmployee(...employee, ...{ [event.target.id]: event.target.value })
+        setEmployee({ ...employee, ...{ [event.target.id]: event.target.value } })
     }
     const onChangeID = (event) => {
         setKey({ ...key, ...{ [event.target.id]: event.target.value } })
